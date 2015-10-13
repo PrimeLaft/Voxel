@@ -19,7 +19,7 @@ public class Models {
     public ModelInstance render(String modelName, Integer id) {
         Model model = assets.get(modelName, Model.class);
         ModelInstance modelInstance = new ModelInstance(model);
-        
+
         try {
             instancesId.get(id);
             instances.get(id);
