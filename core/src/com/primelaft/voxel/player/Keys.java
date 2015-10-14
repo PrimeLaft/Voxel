@@ -2,10 +2,11 @@ package com.primelaft.voxel.player;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
+import com.primelaft.voxel.world.Models;
 
 public class Keys {
-    Actions actions = new Actions();
-    Player player = new Player();
+    public Actions actions = new Actions();
+    public Player player = new Player();
 
     public Keys()
     {
@@ -16,6 +17,7 @@ public class Keys {
     {
         if(Gdx.input.isKeyPressed(Input.Keys.W)) {
             actions.MoveForward(player.vielocity);
+            Models.getInstance(2).transform.setToTranslation(15, 0, 0);
         }
         if(Gdx.input.isKeyPressed(Input.Keys.S)) {
             actions.MoveBack();

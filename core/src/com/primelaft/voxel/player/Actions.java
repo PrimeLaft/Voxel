@@ -1,7 +1,8 @@
 package com.primelaft.voxel.player;
 
+
 public class Actions {
-    Player player = new Player();
+    public Player player = new Player();
 
     public void MoveForward(double vielocity)
     {

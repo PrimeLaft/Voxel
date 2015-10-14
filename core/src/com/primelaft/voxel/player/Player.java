@@ -12,7 +12,7 @@ public class Player {
     public double vielocity = 0.2;
     public double vielocityCurrent;
     public double vielocityMax = 0.5;
-    Keys keys;
+    public Keys keys;
 
     public void initializePlayer()
     {
@@ -34,7 +34,7 @@ public class Player {
         float deltaY = -Gdx.input.getDeltaY() * 0.5f;
         cam.direction.rotate(cam.up, deltaX);
         tmp.set(cam.direction).crs(cam.up).nor();
-        Player.cam.direction.rotate(tmp, deltaY);
+        cam.direction.rotate(tmp, deltaY);
         keys.check();
         Voxel.modelBatch.begin(cam);
     }
