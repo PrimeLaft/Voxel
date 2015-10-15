@@ -47,7 +47,8 @@ public class Models {
         id = id - 1;
 
         Integer instanceId = 0;
-        for (int i = 0; i < instancesId.size; i++) {
+        for (int i = 0; i < instancesId.size; i++)
+        {
             if (instancesId.get(i) == id) {
                 instanceId = i;
             }
