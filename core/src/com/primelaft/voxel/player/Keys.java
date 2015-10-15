@@ -27,7 +27,7 @@ public class Keys {
         }
         if (Gdx.input.isKeyPressed(Input.Keys.D)) {
             actions.MoveRight();
-            Models.removeFromRender(2);
+            Models.removeFromRender(3);
         }
         if (Gdx.input.isKeyPressed(Input.Keys.W) && Gdx.input.isKeyPressed(Input.Keys.SHIFT_LEFT)) {
             actions.MoveForward(player.vielocityMax);

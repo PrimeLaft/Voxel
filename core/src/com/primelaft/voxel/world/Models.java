@@ -5,10 +5,13 @@ import com.badlogic.gdx.graphics.g3d.Model;
 import com.badlogic.gdx.graphics.g3d.ModelInstance;
 import com.badlogic.gdx.utils.Array;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Models {
     public static AssetManager assets;
-    public static Array<ModelInstance> instances = new Array<ModelInstance>();
-    public static Array<Integer> instancesId = new Array<Integer>();
+    public static List<ModelInstance> instances = new ArrayList<ModelInstance>();
+    public static List <Integer> instancesId = new ArrayList<Integer>();
 
     public static void loadModel(String modelName)
     {
@@ -36,10 +39,11 @@ public class Models {
     {
         id = id - 1;
         try {
-            instances.removeIndex(id);
-            instancesId.removeIndex(id);
+            instances.remove((int) id);
+            instancesId.remove((int) id);
+            System.out.println("ok");
         } catch ( IndexOutOfBoundsException e ) {
-
+            System.out.println("error");
         }
     }
     public static ModelInstance getInstance(Integer id)
@@ -47,7 +51,7 @@ public class Models {
         id = id - 1;
 
         Integer instanceId = 0;
-        for (int i = 0; i < instancesId.size; i++)
+        for (int i = 0; i < instancesId.size(); i++)
         {
             if (instancesId.get(i) == id) {
                 instanceId = i;
