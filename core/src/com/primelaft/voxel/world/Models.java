@@ -11,7 +11,7 @@ import java.util.List;
 public class Models {
     public static AssetManager assets;
     public static List<ModelInstance> instances = new ArrayList<ModelInstance>();
-    public static List <Integer> instancesId = new ArrayList<Integer>();
+    public static List<Integer> instancesId = new ArrayList<Integer>();
 
     public static void loadModel(String modelName)
     {
@@ -45,6 +45,7 @@ public class Models {
         } catch ( IndexOutOfBoundsException e ) {
             System.out.println("error");
         }
+        Models.getInstance(3).transform.scale(2.5f, 2.5f, 2.5f);
     }
     public static ModelInstance getInstance(Integer id)
     {

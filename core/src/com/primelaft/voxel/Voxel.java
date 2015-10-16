@@ -9,6 +9,9 @@ import com.badlogic.gdx.graphics.VertexAttributes;
 import com.badlogic.gdx.graphics.g3d.*;
 import com.badlogic.gdx.graphics.g3d.attributes.TextureAttribute;
 import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
+import com.badlogic.gdx.math.Vector3;
+import com.primelaft.voxel.actors.Actor;
+import com.primelaft.voxel.actors.Actors;
 import com.primelaft.voxel.player.Player;
 import com.primelaft.voxel.world.Models;
 import com.primelaft.voxel.world.World;
@@ -39,12 +42,19 @@ public class Voxel implements ApplicationListener {
 		test2.transform.setToTranslation(0, 0, 0);
 
 
-		Models.loadModel("bearobj.obj");
-		Models.loadModel("bearobj.obj");
-		Models.loadModel("bearobj.obj");
-		Models.addToRender("bearobj.obj", 1);
-		Models.addToRender("bearobj.obj", 2).transform.setToTranslation(20, 0, 0);
-		Models.addToRender("bearobj.obj", 3).transform.setToTranslation(40, 0, 0);
+		Actor actor1 = new Actor();
+		actor1.createNewActor("bearobj.obj", 100, new Vector3(10, 0f, 0f));
+		Actor actor2 = new Actor();
+		actor2.createNewActor("bearobj.obj", 100, new Vector3(30, 0f, 0f));
+		Actor actor3 = new Actor();
+		actor3.createNewActor("bearobj.obj", 100, new Vector3(50, 0f, 0f));
+		Actor actor4 = new Actor();
+		actor4.createNewActor("bearobj.obj", 100, new Vector3(70, 0f, 0f));
+
+
+
+
+
 	}
 
 	@Override
