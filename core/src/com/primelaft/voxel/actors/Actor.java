@@ -17,6 +17,7 @@ public class Actor {
     {
         setModel(model, location);
         setLocation(location);
+        setHealth(health);
         addToRegistry();
     }
     /*
@@ -60,7 +61,7 @@ public class Actor {
     */
     public void setHealth(Integer newHealth)
     {
-
+        health = newHealth;
     }
     /*
     Kill actor = remove from world

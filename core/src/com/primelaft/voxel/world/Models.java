@@ -41,9 +41,7 @@ public class Models {
         try {
             instances.remove((int) id);
             instancesId.remove((int) id);
-            System.out.println("ok");
         } catch ( IndexOutOfBoundsException e ) {
-            System.out.println("error");
         }
         Models.getInstance(3).transform.scale(2.5f, 2.5f, 2.5f);
     }
