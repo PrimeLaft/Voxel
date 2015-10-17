@@ -86,6 +86,7 @@ public class Voxel implements ApplicationListener {
 
 		batch.begin();
 		font12.draw(batch, "FPS: " + Gdx.graphics.getFramesPerSecond(), 20, 20);
+		font12.draw(batch, "Actors: " + Actors.actors.size(), 20, 40);
 		batch.end();
 
 		modelBatch.render(Models.instances, environment);
