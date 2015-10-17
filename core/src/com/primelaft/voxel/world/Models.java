@@ -3,7 +3,6 @@ package com.primelaft.voxel.world;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.g3d.Model;
 import com.badlogic.gdx.graphics.g3d.ModelInstance;
-import com.badlogic.gdx.utils.Array;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -3,9 +3,11 @@ package com.primelaft.voxel;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
-import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.VertexAttributes;
+import com.badlogic.gdx.graphics.*;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.badlogic.gdx.graphics.g3d.*;
 import com.badlogic.gdx.graphics.g3d.attributes.TextureAttribute;
 import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
@@ -16,6 +18,8 @@ import com.primelaft.voxel.player.Player;
 import com.primelaft.voxel.world.Models;
 import com.primelaft.voxel.world.World;
 
+import java.awt.*;
+
 public class Voxel implements ApplicationListener {
 	public static ModelBatch modelBatch;
 	public Player player = new Player();
@@ -23,6 +27,10 @@ public class Voxel implements ApplicationListener {
 	Model test;
 	ModelInstance test2;
 	public World world = new World();
+
+
+	SpriteBatch batch;
+	BitmapFont font12;
 
 	@Override
 	public void create()
@@ -55,8 +63,16 @@ public class Voxel implements ApplicationListener {
 
 
 
+		FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("Roboto.ttf"));
+		FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
+		parameter.size = 12;
+		parameter.color = Color.GOLD;
+		parameter.borderColor = Color.DARK_GRAY;
+		parameter.borderWidth = 1;
+		font12 = generator.generateFont(parameter); // font size 12 pixels
+		generator.dispose(); // don't forget to dispose to avoid memory leaks!
 
-
+		batch = new SpriteBatch();
 	}
 
 	@Override
@@ -68,8 +84,9 @@ public class Voxel implements ApplicationListener {
 		modelBatch.render(test2, environment);
 
 
-		//System.out.println(Gdx.graphics.getFramesPerSecond());
-
+		batch.begin();
+		font12.draw(batch, "FPS: " + Gdx.graphics.getFramesPerSecond(), 20, 20);
+		batch.end();
 
 		modelBatch.render(Models.instances, environment);
 		modelBatch.end();

@@ -32,7 +32,6 @@ public class Actor {
     */
     public void playAnimation()
     {
-
     }
     /*
     Stop current animation of actor
