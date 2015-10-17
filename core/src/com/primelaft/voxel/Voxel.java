@@ -43,13 +43,15 @@ public class Voxel implements ApplicationListener {
 
 
 		Actor actor1 = new Actor();
-		actor1.createNewActor("bearobj.obj", 100, new Vector3(10, 0f, 0f));
+		actor1.createNewActor("bearobj.obj", 100, new Vector3(10, 5f, 0f));
 		Actor actor2 = new Actor();
-		actor2.createNewActor("bearobj.obj", 100, new Vector3(30, 0f, 0f));
+		actor2.createNewActor("bearobj.obj", 100, new Vector3(20, 0f, 0f));
 		Actor actor3 = new Actor();
-		actor3.createNewActor("bearobj.obj", 100, new Vector3(50, 0f, 0f));
+		actor3.createNewActor("bearobj.obj", 100, new Vector3(30, 0f, 0f));
 		Actor actor4 = new Actor();
-		actor4.createNewActor("bearobj.obj", 100, new Vector3(70, 0f, 0f));
+		actor4.createNewActor("bearobj.obj", 100, new Vector3(40, 0f, 0f));
+		Actor actor5 = new Actor();
+		actor5.createNewActor("bearobj.obj", 100, new Vector3(50, 0f, 0f));
 
 
 

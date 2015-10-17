@@ -29,10 +29,11 @@ public class Keys {
         if (Gdx.input.isKeyPressed(Input.Keys.D)) {
             actions.MoveRight();
             //Models.removeFromRender(2);
-            Actors.actors.get(0).setLocation(new Vector3(-2f, 10f, 0f));
-            Actors.actors.get(1).setLocation(new Vector3(-8f, 5f, 0f));
-            Actors.actors.get(2).setLocation(new Vector3(-14f, 5f, 0f));
-            Actors.actors.get(3).setLocation(new Vector3(-20f, 5f, 0f));
+            Actors.actors.get(0).setLocation(new Vector3(-10f, 3f, 0f));
+            Actors.actors.get(1).setLocation(new Vector3(-10f, 1f, 0f));
+            Actors.actors.get(2).setLocation(new Vector3(-10f, 1f, 0f));
+            Actors.actors.get(3).setLocation(new Vector3(-10f, 1f, 0f));
+            Actors.actors.get(4).setLocation(new Vector3(-10f, 1f, 0f));
         }
         if (Gdx.input.isKeyPressed(Input.Keys.W) && Gdx.input.isKeyPressed(Input.Keys.SHIFT_LEFT)) {
             actions.MoveForward(player.vielocityMax);

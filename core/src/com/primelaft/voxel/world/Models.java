@@ -49,8 +49,6 @@ public class Models {
     }
     public static ModelInstance getInstance(Integer id)
     {
-        id = id - 1;
-
         Integer instanceId = 0;
         for (int i = 0; i < instancesId.size(); i++)
         {
