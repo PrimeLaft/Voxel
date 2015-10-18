@@ -42,8 +42,8 @@ public class Voxel implements ApplicationListener {
 
 		ModelBuilder modelBuilder = new ModelBuilder();
 
-		FileHandle imageFileHandle = Gdx.files.internal("badlogic.jpg");
-		test = modelBuilder.createBox(10f, 1f, 10f, new Material(),
+		FileHandle imageFileHandle = Gdx.files.internal("texture.jpg");
+		test = modelBuilder.createBox(200f, 1f, 200f, new Material(),
 				VertexAttributes.Usage.Position | VertexAttributes.Usage.Normal | VertexAttributes.Usage.TextureCoordinates);
 		test2 = new ModelInstance(test);
 		test2.materials.first().set(TextureAttribute.createDiffuse(new Texture(imageFileHandle)));
@@ -51,15 +51,15 @@ public class Voxel implements ApplicationListener {
 
 
 		Actor actor1 = new Actor();
-		actor1.createNewActor("bearobj.obj", 100, new Vector3(10, 5f, 0f));
+		actor1.createNewActor("ziomek", "bearobj.obj", 100, new Vector3(10, 0f, 0f));
 		Actor actor2 = new Actor();
-		actor2.createNewActor("bearobj.obj", 100, new Vector3(20, 0f, 0f));
+		actor2.createNewActor("henio", "bearobj.obj", 100, new Vector3(20, 0f, 0f));
 		Actor actor3 = new Actor();
-		actor3.createNewActor("bearobj.obj", 100, new Vector3(30, 0f, 0f));
+		actor3.createNewActor("stefan", "bearobj.obj", 100, new Vector3(30, 0f, 0f));
 		Actor actor4 = new Actor();
-		actor4.createNewActor("bearobj.obj", 100, new Vector3(40, 0f, 0f));
+		actor4.createNewActor("julia", "bearobj.obj", 100, new Vector3(40, 2f, 0f));
 		Actor actor5 = new Actor();
-		actor5.createNewActor("bearobj.obj", 100, new Vector3(50, 0f, 0f));
+		actor5.createNewActor("ola", "bearobj.obj", 100, new Vector3(50, 0f, 0f));
 
 
 

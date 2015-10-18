@@ -15,6 +15,7 @@ public class Keys {
         Gdx.input.setCursorCatched(true);
     }
 
+    public Integer i = 0;
     public void check()
     {
         if (Gdx.input.isKeyPressed(Input.Keys.W)) {
@@ -28,12 +29,9 @@ public class Keys {
         }
         if (Gdx.input.isKeyPressed(Input.Keys.D)) {
             actions.MoveRight();
-            //Models.removeFromRender(2);
-            Actors.actors.get(0).setLocation(new Vector3(-10f, 3f, 0f));
-            Actors.actors.get(1).setLocation(new Vector3(-10f, 1f, 0f));
-            Actors.actors.get(2).setLocation(new Vector3(-10f, 1f, 0f));
-            Actors.actors.get(3).setLocation(new Vector3(-10f, 1f, 0f));
-            Actors.actors.get(4).setLocation(new Vector3(-10f, 1f, 0f));
+
+
+            Actors.getActor("julia").setLocation(new Vector3(-10f, 4f, 0f));
         }
         if (Gdx.input.isKeyPressed(Input.Keys.W) && Gdx.input.isKeyPressed(Input.Keys.SHIFT_LEFT)) {
             actions.MoveForward(player.vielocityMax);

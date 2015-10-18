@@ -13,19 +13,19 @@ public class Actor {
     /*
     Create a new Actor
     */
-    public void createNewActor(String model, Integer health, Vector3 location)
+    public void createNewActor(String actorName, String model, Integer health, Vector3 location)
     {
+        addToRegistry(actorName);
         setModel(model, location);
         setLocation(location);
         setHealth(health);
-        addToRegistry();
     }
     /*
     Add actor object to registry
     */
-    public void addToRegistry()
+    public void addToRegistry(String actorName)
     {
-        Actors.addToRegistry(this);
+        Actors.addToRegistry(this, actorName);
     }
     /*
     Play new actor animation
@@ -53,7 +53,7 @@ public class Actor {
     public void setModel(String model, Vector3 location)
     {
         Models.loadModel(model);
-        Models.addToRender(model, Actors.actors.size() + 1).transform.setToTranslation(location);
+        Models.addToRender(model, Actors.actors.size()).transform.setToTranslation(location);
     }
     /*
     Set actor health

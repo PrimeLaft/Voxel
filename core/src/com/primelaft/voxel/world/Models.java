@@ -22,8 +22,6 @@ public class Models {
         Model model = assets.get(modelName, Model.class);
         ModelInstance modelInstance = new ModelInstance(model);
 
-        id = id - 1;
-
         try {
             instancesId.get(id);
             instances.get(id);
@@ -36,24 +34,15 @@ public class Models {
     }
     public static void removeFromRender(Integer id)
     {
-        id = id - 1;
         try {
             instances.remove((int) id);
             instancesId.remove((int) id);
         } catch ( IndexOutOfBoundsException e ) {
         }
-        Models.getInstance(3).transform.scale(2.5f, 2.5f, 2.5f);
     }
     public static ModelInstance getInstance(Integer id)
     {
-        Integer instanceId = 0;
-        for (int i = 0; i < instancesId.size(); i++)
-        {
-            if (instancesId.get(i) == id) {
-                instanceId = i;
-            }
-        }
-        return instances.get(instanceId);
+        return instances.get(id);
     }
 }
 
